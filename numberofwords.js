@@ -1,11 +1,13 @@
-let str = "salik";
+let string = "I love to eat Biryani with and without salad";
+let str = string.trim(); // trimwill eliminate white spaces from start and end.
 
-let words = 0;
+var reg = /\W+/; // regular expression which take metacharacters from A-Z && a-z && 0-9 and eleminates others
 
-for(let i=0; i<str.length; i++){
-    if(str.charCodeAt(i) == 32){
-        continue;
-    }
-    else{words++}
-}
-console.log(words);
+let words = str.split(reg); // here we split the "str" with "reg" 
+
+console.log("Number of words in string: "+words.length);
+
+
+
+
+
